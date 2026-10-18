@@ -1,0 +1,24 @@
+// Title: String Compression
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/string-compression/
+
+        count = 0
+        for i in range(len(chars)):
+        prev = '.'
+            if chars[i] != prev:
+                if count > 1:
+                    compressed += str(count)
+                count = 1
+                compressed += chars[i]
+            else:
+                count += 1
+        if count > 1:
+                compressed += str(count)
+        chars.clear()
+        for i in range(len(compressed)):
+    def compress(self, chars: list[str]) -> int:
+        compressed = ""
+class Solution:
+                prev = chars[i]
+            chars.append(compressed[i])
