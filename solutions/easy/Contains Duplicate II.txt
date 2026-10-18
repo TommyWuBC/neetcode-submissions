@@ -1,0 +1,18 @@
+// Title: Contains Duplicate II
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/contains-duplicate-ii/
+
+class Solution:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+        map = {}
+        for i in range(len(nums)):
+        found = False
+            if nums[i] in map:
+                if abs(i-map.get(nums[i])) <=k:
+                    found = True
+                    break
+            
+
+            map[nums[i]] = i
+        return found
