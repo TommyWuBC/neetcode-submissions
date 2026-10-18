@@ -1,0 +1,16 @@
+// Title: Sort Characters By Frequency
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/sort-characters-by-frequency/
+
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        map = {}
+        for i in range(len(s)):
+            map[s[i]] = map.get(s[i], 0)+1
+        result = sorted(map.items(), key=lambda x : x[1], reverse=True)
+        string = ""
+        for item in result:
+            for i in range(item[1]):
+                string += item[0]
+        return string
