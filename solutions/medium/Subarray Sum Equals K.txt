@@ -1,0 +1,18 @@
+// Title: Subarray Sum Equals K
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/subarray-sum-equals-k/
+
+        freq = {0:1}
+    def subarraySum(self, nums: List[int], k: int) -> int:
+class Solution:
+        curr = 0
+        count = 0
+        for num in nums:
+            curr = curr+num
+            if curr-k in freq:
+                count += freq[curr-k]
+            
+            freq[curr] = freq.get(curr, 0) +1
+        
+        return count
