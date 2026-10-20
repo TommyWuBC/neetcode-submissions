@@ -1,0 +1,27 @@
+// Title: Accounts Merge
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/accounts-merge/
+
+
+
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.rank = [0]*n
+    
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+    
+    def union(self, x, y):
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX == rootY:
+            return
+        if self.rank[rootX] > self.rank[rootY]:
+            self.parent[rootY] = rootX
+        elif self.rank[rootY] > self.rank[rootX]:
+            self.parent[rootX] = rootY
+        else:
