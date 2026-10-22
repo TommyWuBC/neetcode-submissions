@@ -1,0 +1,27 @@
+// Title: Distribute Coins in Binary Tree
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/distribute-coins-in-binary-tree/
+
+class Solution:
+    def distributeCoins(self, root: TreeNode | None) -> int:
+        moves = 0
+
+class TreeNode:
+        def recurse(curr):
+            if curr is None:
+                return 0
+            debt1 = recurse(curr.left)
+            debt2 = recurse(curr.right)
+
+#         self.right = right
+#         self.left = left
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+            nonlocal moves
+            moves += abs(debt1)
+            moves+= abs(debt2)
+            debt = curr.val-1+debt1+debt2
+            return debt
+        recurse(root)
+        return moves
