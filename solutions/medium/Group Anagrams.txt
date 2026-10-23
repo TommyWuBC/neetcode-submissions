@@ -1,0 +1,15 @@
+// Title: Group Anagrams
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/group-anagrams/
+
+class Solution:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        groups = defaultdict(list)
+        for word in strs:
+            s = defaultdict(int)
+            for char in word:
+                s[char]+=1
+            groups[key].append(word)
+        return list(groups.values())
+            key = tuple(sorted(s.items()))
