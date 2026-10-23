@@ -1,0 +1,29 @@
+// Title: 4Sum
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/4sum/
+
+                        two.append([nums[i], diff])
+                else:
+                    map[nums[i]] = i
+            return two
+        for i in range(len(nums)-3):
+            if i>0 and nums[i-1] == nums[i]:
+                continue
+                    pair = (diff, nums[i])
+                    if pair not in seen:
+                        seen.add(pair)
+            for j in range(i+1, len(nums)-2):
+                if j > i+1 and nums[j-1] == nums[j]:
+                if diff in map:
+                diff = target - nums[i]
+                    continue
+                res = twosum(j+1, len(nums), target-nums[i]-nums[j])
+                if res:
+                    for item in res:
+                        result.append([nums[i], nums[j]] +item)
+            for i in range(start, end):
+            seen = set()
+            map ={}
+        return result
+                    
