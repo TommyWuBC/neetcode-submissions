@@ -1,0 +1,27 @@
+// Title: Find Beautiful Indices in the Given Array I
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/
+
+        def bs(val, arr):
+            left = 0
+        result = []
+            nonlocal result
+            right = len(arr)-1
+            while left <= right:
+                mid = (left+right)//2
+                if abs(arr[mid] - val) <= k:
+                    result.append(val)
+                    break
+                else:
+                    if arr[mid]-val <0:
+                        left = mid+1
+                    else:
+                        right = mid-1
+        for i in range(len(arra)):
+            bs(arra[i], arrb)
+        return result
+            start = i+1
+            arrb.append(i)
+                break
+            if i ==-1:
