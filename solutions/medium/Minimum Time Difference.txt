@@ -1,0 +1,19 @@
+// Title: Minimum Time Difference
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/minimum-time-difference/
+
+            hour = int(hour)
+            minute = int(minute)
+            minutes = hour*60 + minute
+            time.append(minutes)
+        time.sort()
+        mindiff = float('inf')
+        for i in range(1, len(time)):
+            if diff < mindiff:
+                mindiff = diff
+                
+            diff = time[i]-time[i-1]
+        return mindiff
+        mindiff = min(mindiff, 1440-time[-1]+time[0])
+
