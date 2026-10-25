@@ -1,0 +1,15 @@
+// Title: Koko Eating Bananas
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/koko-eating-bananas/
+
+            else:
+                right = mid-1
+        return left
+
+    def eat(self, k):
+        time = 0
+        for i in range(len(self.piles)):
+            time += math.ceil(self.piles[i]/k)
+        return time
+
