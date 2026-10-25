@@ -1,0 +1,23 @@
+// Title: Binary Tree Level Order Traversal
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/binary-tree-level-order-traversal/
+
+        queue.append(root)
+        while queue:
+            size = len(queue)
+            for i in range(size):
+            arr = []
+                node = queue.popleft()
+                arr.append(node.val)
+                if node.left is not None:
+                    queue.append(node.left)
+                if node.right is not None:
+                    queue.append(node.right)
+        output = []
+        queue = deque()
+            return []
+        if root is None:
+            output.append(arr)
+        return output
+        
