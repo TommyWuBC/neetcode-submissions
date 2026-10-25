@@ -1,0 +1,22 @@
+// Title: Longest Consecutive Sequence
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/longest-consecutive-sequence/
+
+class Solution:
+    def longestConsecutive(self, nums: list[int]) -> int:
+        nums.sort()
+        count = 1
+        for i in range(len(nums)):
+            if i >0:
+                if nums[i] == nums[i-1]+1:
+                    count +=1
+                else:
+                    count =1
+        highest = 1
+                    highest = max(count, highest)
+                elif nums[i] == nums[i-1]:
+                    continue
+        if len(nums) == 0:
+            return 0
+        return highest
