@@ -1,0 +1,28 @@
+// Title: Reward Top K Students
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/reward-top-k-students/
+
+                    points -=1
+            map[student_id[i]] = points
+                elif word in negative_feedback:
+                    points +=3
+            for word in rep:
+                if word in positive_feedback:
+        result = []
+        count = 0
+        for key, val in sorted(map.items(), key=lambda x:(-x[1], x[0])):
+            result.append(key)
+            count +=1
+            if count ==k:
+                break
+            rep = report[i].split()
+            points = 0
+        for i in range(len(student_id)):
+        map = {}
+    student_id: list[int], k: int) -> list[int]:
+    def topStudents(self, positive_feedback: list[str], negative_feedback: list[str], report: list[str], 
+class Solution:
+        positive_feedback = set(positive_feedback)
+        negative_feedback = set(negative_feedback)
+        return result
