@@ -1,0 +1,18 @@
+// Title: Top K Frequent Words
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/top-k-frequent-words/
+
+class Solution:
+    def topKFrequent(self, words: list[str], k: int) -> list[str]:
+        map = {}
+        for word in words:
+            map[word] = map.get(word, 0)+1
+        count = 0
+        output = []
+        for key, val in sorted(map.items(), key=lambda x: (-x[1], x[0])):
+            output.append(key)
+            count +=1
+            if count ==k:
+                break
+        return output
