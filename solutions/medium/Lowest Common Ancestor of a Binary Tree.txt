@@ -1,0 +1,23 @@
+// Title: Lowest Common Ancestor of a Binary Tree
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+
+        return root
+    def recurse(self, curr, target):
+        if curr is None:
+            return
+        if curr.val == target.val:
+            if target == self.p:
+            for j in self.qarr:
+                if i == j:
+                    return i
+        for i in self.parr:
+        self.recurse(root, q)
+        self.recurse(root, p)
+        self.q =q
+        self.p = p
+                self.parr.append(curr)
+            elif target == self.q:
+                self.qarr.append(curr)
+            return True
