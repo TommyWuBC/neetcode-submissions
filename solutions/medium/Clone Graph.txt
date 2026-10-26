@@ -1,0 +1,27 @@
+// Title: Clone Graph
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/clone-graph/
+
+        while queue:
+            size = len(queue)
+            for i in range(size):
+                n = queue.popleft()
+                if n not in map:
+                    copy = Node(n.val)
+                    map[n] = copy
+        queue.append(node)
+        queue = deque()
+        map = {}
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        if node is None:
+            return
+                for neighbor in n.neighbors:
+                    if neighbor not in map:
+                        neighborcopy = Node(neighbor.val)
+                        map[neighbor] = neighborcopy
+                    map[n].neighbors.append(map.get(neighbor))
+class Solution:
+        return map[node]
+
+                        queue.append(neighbor)
