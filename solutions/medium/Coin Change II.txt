@@ -1,0 +1,14 @@
+// Title: Coin Change II
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/coin-change-ii/
+
+class Solution:
+    def change(self, amount: int, coins: list[int]) -> int:
+        dp = [0 for i in range(amount+1)]
+        dp[0] = 1
+        for coin in coins:
+                    dp[i] += dp[i-coin]
+            for i in range(amount+1):
+                if coin <= i:
+        return dp[amount]
