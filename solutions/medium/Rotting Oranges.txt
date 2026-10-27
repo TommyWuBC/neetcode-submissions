@@ -1,0 +1,28 @@
+// Title: Rotting Oranges
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/rotting-oranges/
+
+                y = orange[1]
+                    fresh.discard((x, y))
+                    grid[x][y] =2
+                if grid[x][y] ==1:
+                    flag = True
+                if x-1 >= 0 and grid[x-1][y] ==1:
+                    queue.append((x-1,y))
+                if y-1 >= 0 and grid[x][y-1] ==1:
+                    queue.append((x,y-1))
+                if x+1 < len(grid) and grid[x+1][y] ==1:
+                    queue.append((x+1, y))
+                if y+1 < len(grid[0]) and grid[x][y+1] ==1:
+                    queue.append((x, y+1))
+            if flag:
+                turns +=1
+        if fresh:
+                x = orange[0]
+                orange = queue.popleft()
+            for i in range(size):
+            size = len(queue)
+            flag = False
+        while queue:
+                    queue.append((i,j))
