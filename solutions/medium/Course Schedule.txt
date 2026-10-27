@@ -1,0 +1,30 @@
+// Title: Course Schedule
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/course-schedule/
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
+        map = defaultdict(list)
+        prereqs = [0 for _ in range(numCourses)]
+        zero = deque()
+        for i in range(len(prerequisites)):
+            map[prerequisites[i][1]].append(prerequisites[i][0])
+            prereqs[prerequisites[i][0]] +=1
+        for i in range(len(prereqs)):
+        while zero:
+            course = zero.popleft()
+        if courses:
+            return False
+        return True
+            for c in map[course]:
+                prereqs[c] -= 1
+                if prereqs[c] == 0:
+                    zero.append(c)
+            courses.discard(course)
+        courses = set()
+        for i in range(numCourses):
+            courses.add(i)
+            if prereqs[i] == 0:
+                zero.append(i)
+
