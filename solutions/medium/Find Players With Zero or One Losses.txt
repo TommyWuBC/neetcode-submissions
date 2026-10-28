@@ -1,0 +1,25 @@
+// Title: Find Players With Zero or One Losses
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-players-with-zero-or-one-losses/
+
+        answer = []
+        played = set()
+        for item in matches:
+            map[item[1]] = map.get(item[1], 0)+1
+            if item[1] not in played:
+                played.add(item[1])
+            if item[0] not in played:
+                played.add(item[0])
+        answer0 = []
+        answer1 = []
+        for key, val in map.items():
+            if val == 1:
+                answer1.append(key)
+                played.discard(key)
+        for i in played:
+            if i not in map:
+                answer0.append(i)
+        answer.append(sorted(answer0))
+        answer.append(sorted(answer1))
+        return answer
