@@ -1,0 +1,26 @@
+// Title: Course Schedule II
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/course-schedule-ii/
+
+            if prereqs[i] == 0:
+                zero.append(i)
+        while zero:
+            size = len(zero)
+            for i in range(size):
+                course = zero.popleft()
+                courses.discard(course)
+        for i in range(len(prereqs)):
+            prereqs[prerequisites[i][0]] +=1
+            map[prerequisites[i][1]].append(prerequisites[i][0])
+        for i in range(len(prerequisites)):
+            courses.add(i)
+                result.append(course)
+                for c in map[course]:
+                    prereqs[c] -=1
+                    if prereqs[c] ==0:
+                        zero.append(c)
+        if courses:
+            return []
+        for i in range(numCourses):
+        return result
