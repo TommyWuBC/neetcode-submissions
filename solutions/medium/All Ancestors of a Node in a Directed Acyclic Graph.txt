@@ -1,0 +1,26 @@
+// Title: All Ancestors of a Node in a Directed Acyclic Graph
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
+
+    def getAncestors(self, n: int, edges: list[list[int]]) -> list[list[int]]:
+        map = defaultdict(list)
+        for i in range(len(edges)):
+            map[edges[i][1]].append(edges[i][0])
+        
+    def findancestors(self, k, map, hset):
+        if k not in map:
+            return []
+        ancestors = []
+        for a in map[k]:
+        result = []
+        for i in range(n):
+            result.append(self.findancestors(i, map, set()))
+        return result
+class Solution:
+            if a not in hset:
+                hset.add(a)
+                ancestors.append(a)
+                ancestors += self.findancestors(a, map, hset)
+        ancestors.sort()
+        return ancestors
