@@ -1,0 +1,27 @@
+// Title: Search in Rotated Sorted Array
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+            if nums[mid] < nums[right]:
+                right = mid
+            else:
+                left = mid+1
+        pivot = left
+        size = len(nums)
+        left = pivot
+        right = (pivot-1+size)%size
+        while nums[left] <= nums[right]:
+            mid = (left+((right-left)%size)//2)%size
+            if nums[mid] < target:
+                if nums[(mid+1)%size] <= nums[left]:
+            else:
+            if nums[mid] == target:
+                return mid
+                    break
+                left = (mid+1)%size
+                if nums[(mid-1)%size] >= nums[right]:
+            mid = (left+right)//2
+                    break
+                right = (mid-1)%size
+        return -1
