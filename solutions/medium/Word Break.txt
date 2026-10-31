@@ -1,0 +1,19 @@
+// Title: Word Break
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/word-break/
+
+class Solution:
+    def wordBreak(self, s: str, wordDict: list[str]) -> bool:
+        dp = [False for _ in range(len(s)+1)]
+        wordset = set()
+        for i in range(1, len(s)+1):
+        return dp[-1]
+        
+        dp[0] = True
+        for word in wordDict:
+            wordset.add(word)
+            for j in range(i):
+                if dp[j] and s[j:i] in wordset:
+                    dp[i] = True
+            
