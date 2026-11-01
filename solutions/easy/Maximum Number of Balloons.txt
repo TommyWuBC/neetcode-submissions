@@ -1,0 +1,17 @@
+// Title: Maximum Number of Balloons
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/maximum-number-of-balloons/
+
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        map = {}
+        for s in text:
+            map[s] = map.get(s, 0)+1
+        arr = []
+        for s in "balon":
+            if s=="l" or s=="o":
+                arr.append(map.get(s, 0)//2)
+            else:
+                arr.append(map.get(s, 0))
+        return min(arr)
