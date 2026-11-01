@@ -1,0 +1,29 @@
+// Title: Word Search
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/word-search/
+
+    def recurse(self, n, i, j):
+        word = self.word
+        board = self.board
+        if word[n] != board[i][j]:
+            return False
+        visited = self.visited
+        visited[i][j] = True
+
+        return ans
+            for j in range(b):
+                ans = ans or self.recurse(0, i, j)
+                if ans:
+                    return True
+        for i in range(a):
+        ans = False
+        self.board = board
+        result = False
+        if i-1 >= 0 and not visited[i-1][j]:
+            result = result or self.recurse(n+1, i-1, j)
+        if j-1 >= 0 and not visited[i][j-1]:
+            result = result or self.recurse(n+1, i, j-1)
+        if i+1 < len(board) and not visited[i+1][j]:
+        if n == len(word) - 1:
+            return True
