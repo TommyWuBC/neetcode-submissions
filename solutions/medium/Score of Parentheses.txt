@@ -1,0 +1,21 @@
+// Title: Score of Parentheses
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/score-of-parentheses/
+
+    def scoreOfParentheses(self, s: str) -> int:
+        stack = [0]
+        for i in s:
+            if i == "(":
+                stack.append(0)
+            elif i == ")":
+                val = stack.pop()
+
+                if val == 0:
+                    val = 1
+                else:
+                    val = 2 * val
+                stack[-1] += val
+        return sum(stack)
+
+class Solution:
