@@ -1,0 +1,21 @@
+// Title: Add Two Numbers
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/add-two-numbers/
+
+            curr3.next = ListNode(sum)
+            curr1 = curr1.next
+        while curr2 is not None:
+            sum = curr2.val + carry
+            if carry ==1:
+                carry =0
+            if sum > 9:
+            curr3 = curr3.next
+                carry =1
+                sum = sum%10
+            curr3.next = ListNode(sum)
+            curr2 = curr2.next
+        if carry == 1:
+            curr3.next = ListNode(1)
+            curr3 = curr3.next
+        return start
