@@ -1,0 +1,20 @@
+// Title: Validate Binary Search Tree
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/validate-binary-search-tree/
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isValidBST(self, root: TreeNode | None) -> bool:
+        return self.recurse(root, -float("inf"), float("inf"))
+    def recurse(self, curr, min, max):
+        if curr is None:
+            return True
+        if curr.val <= min or curr.val >= max:
+            return False
+        return self.recurse(curr.left, min, curr.val) and self.recurse(curr.right, curr.val, max)
