@@ -1,0 +1,20 @@
+// Title: Kth Smallest Element in a BST
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+
+
+    def recurse(self, curr):
+        if curr is None:
+            return False
+        if self.recurse(curr.left):
+        self.recurse(root)
+        return self.arr.pop()
+            return True
+        self.arr.append(curr.val)
+        self.size +=1
+        if self.size == self.k:
+            return True
+        if self.recurse(curr.right):
+            return True
+        return False
