@@ -1,0 +1,20 @@
+// Title: Spiral Matrix
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/spiral-matrix/
+
+                if a < 0 or visited[a][b] == True:
+                    rightflag = True
+                    upflag = False
+                    a+=1
+                    b+=1
+                    continue
+                returned.append(matrix[a][b])
+                visited[a][b] = True
+                a-=1
+                count +=1
+        return returned
+
+
+
+
