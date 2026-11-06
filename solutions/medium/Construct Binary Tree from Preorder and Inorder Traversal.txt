@@ -1,0 +1,23 @@
+// Title: Construct Binary Tree from Preorder and Inorder Traversal
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+
+        root = self.recurse(0, self.split(0), 0, len(preorder)-1)
+        return root
+
+    def split(self, preindex):
+        self.inorder = inorder
+        preindex = 0
+        self.preindex = preindex
+        inindex = 0
+        self.inindex = inindex
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def buildTree(self, preorder: list[int], inorder: list[int]) -> TreeNode | None:
+        self.preorder = preorder
+# Definition for a binary tree node.
+# class TreeNode:
