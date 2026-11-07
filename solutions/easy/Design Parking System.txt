@@ -1,0 +1,21 @@
+// Title: Design Parking System
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/design-parking-system/
+
+            if self.medium < self.mediumcap:
+                self.medium +=1
+                return True
+            else:
+                return False
+        else:
+            if self.big < self.bigcap:
+                self.big +=1
+                return True
+            else:
+                return False
+
+
+# Your ParkingSystem object will be instantiated and called as such:
+# obj = ParkingSystem(big, medium, small)
+# param_1 = obj.addCar(carType)
