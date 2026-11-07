@@ -1,0 +1,24 @@
+// Title: Design Twitter
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/design-twitter/
+
+            for tweet in self.usertweets[following]:
+        arr = []
+        for tweet in self.usertweets[userId]:
+            arr.append((-tweet[1], tweet[0]))
+        for following in self.userfollow[userId]:
+            if following == userId:
+                continue
+        self.userfollowers = defaultdict(set)
+        self.usertweets = defaultdict(list)
+        self.time = 0
+    def postTweet(self, userId: int, tweetId: int) -> None:
+        self.usertweets[userId].append((tweetId, self.time))
+        self.time +=1
+
+    def getNewsFeed(self, userId: int) -> list[int]:
+class Twitter:
+
+    def __init__(self):
+        self.userfollow = defaultdict(set)
