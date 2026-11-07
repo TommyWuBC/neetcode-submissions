@@ -1,0 +1,25 @@
+// Title: House Robber
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/house-robber/
+
+
+    def steal(self, i):
+        if i >= len(self.dp):
+        if self.dp[i] != -1:
+            return self.dp[i]
+            return 0
+        self.nums = nums
+        self.dp[i] = max(self.nums[i] + self.steal(i+2), self.steal(i+1))
+        for i in range(len(nums)):
+            self.steal(i)
+        
+        self.maximum = 0
+        if self.dp[i] > self.maximum:
+            self.maximum =self.dp[i]
+        self.dp = dp
+        dp = [-1 for _ in range(len(nums))]
+    def rob(self, nums: list[int]) -> int:
+class Solution:
+        return self.maximum
+        return self.dp[i]
