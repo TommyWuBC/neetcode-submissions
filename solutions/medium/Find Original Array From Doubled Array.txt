@@ -1,0 +1,23 @@
+// Title: Find Original Array From Doubled Array
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-original-array-from-doubled-array/
+
+        freq ={}
+        for num in changed:
+            freq[num] = freq.get(num, 0) +1
+        for num in changed:
+            if 2*num in freq:
+                freq[2*num] -=1
+                freq[num] -=1
+                result.append(num)
+        if freq:
+                if freq[2*num] ==0:
+                    freq.pop(2*num)
+                if num in freq and freq[num] ==0:
+                    freq.pop(num)
+            if num not in freq:
+                continue
+            return []
+        return result
+
