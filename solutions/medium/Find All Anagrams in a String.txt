@@ -1,0 +1,39 @@
+// Title: Find All Anagrams in a String
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-all-anagrams-in-a-string/
+
+                        seen[s[left]].popleft()
+                        left +=1
+                    right +=1
+                    continue
+                elif s[right] in curr:
+                    firstseen = seen[s[right]][0]
+                    for i in range(left, firstseen+1):
+                        curr[s[i]] -=1
+                        if curr[s[i]] ==0:
+                            curr.pop(s[i])
+                        seen[s[i]].popleft()
+                    left = firstseen+1
+                    curr[s[right]] = curr.get(s[right], 0)+1
+                    seen[s[right]].append(right)
+                    if curr == map:
+                        result.append(left)
+                        curr[s[left]] -=1
+                        if curr[s[left]] == 0:
+                            curr.pop(s[left])
+                        seen[s[left]].popleft()
+                        left +=1
+                    right +=1
+                else:
+                    curr[s[right]] =1
+                    seen[s[right]].append(right)
+                    if curr == map:
+                        result.append(left)
+                        curr[s[left]] -=1
+                        if curr[s[left]] == 0:
+                            curr.pop(s[left])
+                        seen[s[left]].popleft()
+                        left +=1
+                    right +=1
+        return result        
