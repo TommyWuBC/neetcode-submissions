@@ -1,0 +1,21 @@
+// Title: Permutation in String
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/permutation-in-string/
+
+                    copy[s2[i]] = copy.get(s2[i], 0)+1
+                    seen[s2[i]].popleft()
+                left = firstindex+1
+                copy[s2[right]] -= 1
+                if copy[s2[right]] ==0:
+                    copy.pop(s2[right])
+                seen[s2[right]].append(right)
+                right +=1
+            else:
+                left = right+1
+                right = left
+                copy = deepcopy(map)
+                seen= defaultdict(deque)
+        if not copy:
+            return True
+        return False
