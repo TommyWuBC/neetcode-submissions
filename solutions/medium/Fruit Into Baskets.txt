@@ -3,4 +3,38 @@
             // Language: Python3
             // Link: https://leetcode.com/problems/fruit-into-baskets/
 
- 
+class Solution:
+    def totalFruit(self, fruits: list[int]) -> int:
+        maximum = 1
+        curr = 0
+        left = 0
+        right = left
+        baskets = {}
+        lastseen = {}
+        while left <= right and right < len(fruits):
+            if fruits[right] not in baskets and len(baskets) < 2:
+                baskets[fruits[right]] = 1
+                lastseen[fruits[right]] = right
+                right += 1
+                curr +=1
+                if curr > maximum:
+                    maximum = curr
+            elif fruits[right] in baskets:
+                baskets[fruits[right]] = baskets.get(fruits[right], 0)+1
+                lastseen[fruits[right]] = right
+                right +=1
+                curr +=1
+                if curr > maximum:
+                    maximum = curr
+            else:
+                removed = min(lastseen, key=lastseen.get)
+                lastindex = lastseen.pop(removed)
+                for i in range(left, lastindex+1):
+                    baskets[fruits[i]] -=1
+                    if baskets[fruits[i]] ==0:
+                        baskets.pop(fruits[i])
+                    curr -=1
+                left = lastindex+1
+                baskets[fruits[right]] =1
+                lastseen[fruits[right]] =right
+                curr +=1
