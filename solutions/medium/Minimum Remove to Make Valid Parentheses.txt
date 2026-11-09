@@ -1,0 +1,6 @@
+// Title: Minimum Remove to Make Valid Parentheses
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+
+c
