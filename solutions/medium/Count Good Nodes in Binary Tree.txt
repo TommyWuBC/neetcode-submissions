@@ -3,4 +3,24 @@
             // Language: Python3
             // Link: https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
-#
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def goodNodes(self, root: TreeNode) -> int:
+        goodcount =0
+        self.goodcount = goodcount
+        self.dfs(root, root.val)
+        return self.goodcount
+    def dfs(self, curr, max):
+        if curr is None:
+            return
+        if curr.val >= max:
+            self.goodcount +=1
+            max = curr.val
+        self.dfs(curr.left, max)
+        self.dfs(curr.right, max)
+        return
