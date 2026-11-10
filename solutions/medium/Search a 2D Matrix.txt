@@ -3,4 +3,18 @@
             // Language: Python3
             // Link: https://leetcode.com/problems/search-a-2d-matrix/
 
-c
+class Solution:
+    def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
+        left = 0
+        right = len(matrix)*len(matrix[0])-1
+        while left <= right:
+            mid = (left+right)//2
+            midcol = mid%len(matrix[0])
+            midrow = mid//len(matrix[0])
+            if matrix[midrow][midcol] == target:
+                return True
+            elif matrix[midrow][midcol] < target:
+                left = mid+1
+            else:
+                right = mid-1
+        return False
