@@ -3,4 +3,23 @@
             // Language: Python3
             // Link: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 
-c
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        result=""
+        stack =[]
+        valid = set()
+        for i in range(len(s)):
+            if s[i] == "(":
+                stack.append(("(", i))
+            if s[i] == ")" and stack:
+                item = stack.pop()
+                if item[0] == "(":
+                    valid.add(item[1])
+                    valid.add(i)
+        for i in range(len(s)):
+            if s[i] == "(" or s[i] ==")":
+                if i in valid:
+                    result+=s[i]
+            else:
+                result += s[i]
+        return result
