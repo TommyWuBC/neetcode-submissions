@@ -1,0 +1,17 @@
+// Title: Jump Game
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/jump-game/
+
+class Solution:
+    def canJump(self, nums: list[int]) -> bool:
+        farthest = nums[0]
+        for i in range(1, len(nums)):
+            if i <= farthest:
+                if nums[i] +i > farthest:
+                    farthest = nums[i] +i
+        if farthest >= len(nums)-1:
+            return True
+        if len(nums) <= 1:
+            return True
+        return False
