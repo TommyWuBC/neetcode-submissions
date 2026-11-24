@@ -1,0 +1,6 @@
+// Title: Partition Labels
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/partition-labels/
+
+c
