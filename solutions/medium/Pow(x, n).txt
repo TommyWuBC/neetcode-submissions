@@ -1,0 +1,6 @@
+// Title: Pow(x, n)
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/pow(x,-n)/
+
+c
