@@ -1,0 +1,16 @@
+// Title: Jump Game II
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/jump-game-ii/
+
+class Solution:
+    def jump(self, nums: list[int]) -> int:
+        furthest = 0
+        count = 0
+        prev = 0
+        for i in range(len(nums)-1):
+            furthest = max(furthest, i+nums[i])
+            if i == prev:
+                count +=1
+                prev = furthest
+        return count
